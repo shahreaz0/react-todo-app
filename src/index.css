@@ -6,6 +6,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
 
 body {
   margin: 0;
@@ -16,8 +19,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 /* =========================== App ==============================*/
@@ -29,11 +31,11 @@ code {
 
 /* =========================== ToDoList ==============================*/
 .ToDoList {
-  width: 469px;
+  width: 29.313rem;
   /*height: 496px;*/
   background: #eaeaf5;
   box-shadow: 5px 5px 50px 2px #928ed7;
-  border-radius: 30px;
+  border-radius: 1.875rem;
   padding: 1rem 1.5rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -44,7 +46,7 @@ code {
   font-family: Bungee Shade;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
+  font-size: 1.563rem;
   color: #1a1b38;
   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -55,24 +57,29 @@ code {
 
 .Button-add,
 .Button-save {
-  width: 64px;
-  height: 38px;
+  width: 4rem;
+  height: 2.375rem;
   background: #1a1b38;
   box-shadow: 2px 4px 10px 1px rgba(26, 27, 56, 0.3);
-  border-radius: 40px;
+  border-radius: 2.5rem;
   color: #eaeaf5;
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
   border: none;
   margin: 0 0 0 0.5rem;
 }
 
+.bx-plus:hover {
+  transform: rotate(90deg);
+  transition: 0.5s;
+}
+
 .Button {
   border: none;
-  width: 51px;
-  height: 28px;
+  width: 3.1875rem;
+  height: 1.75rem;
   border-radius: 60px;
-  font-size: 16px;
+  font-size: 1rem;
   color: #1a1b38;
   cursor: pointer;
 }
@@ -86,15 +93,28 @@ code {
   margin: 0.3rem;
 }
 
+.lite-green:hover {
+  background-color: #eaeaf5;
+  transition: 0.2s;
+}
+
+.lite-pink:hover {
+  background: #eaeaf5;
+  transition: 0.2s;
+}
+
+/* =========================== ToDoItem & ToDoFrom ==============================*/
+
 .ToDoForm-input,
 .ToDoItem-save-input {
-  width: 400px;
-  height: 38px;
+  outline: none;
+  width: 100%;
+  height: 2.375rem;
   background: #eaeaf5;
   border: 4px solid #393c7b;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   box-shadow: 2px 4px 10px 1px rgba(26, 27, 56, 0.3);
-  border-radius: 40px;
+  border-radius: 2.5rem;
   padding: 0.5rem 0.75rem;
 }
 
@@ -104,6 +124,11 @@ code {
   border: 4x solid pink;
 }
 
+.ToDoForm {
+  display: flex;
+  margin: 1rem 0;
+}
+
 .ToDoItem {
   display: flex;
   justify-content: space-between;
@@ -111,19 +136,28 @@ code {
   margin: 1rem 0;
   padding: 0 0 0 1rem;
   width: auto;
-  height: 38px;
-  color: #ffffff;
+  height: 2.375rem;
+  color: #eaeaf5;
   background: #1a1b38;
   box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.3);
-  border-radius: 50px;
-  font-size: 12px;
+  border-radius: 3.125rem;
+  font-size: 0.9rem;
 }
 
 .ToDoItem-content {
   cursor: pointer;
 }
 
-.ToDoForm {
-  display: flex;
-  margin: 1rem 0;
+@media only screen and (max-width: 580px) {
+  html {
+    font-size: 14px;
+  }
+
+  .App {
+    margin: 0;
+  }
+  .ToDoList {
+    width: 100%;
+    border-radius: 0;
+  }
 }
