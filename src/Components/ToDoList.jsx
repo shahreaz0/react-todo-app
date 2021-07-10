@@ -11,7 +11,6 @@ export default class ToDoList extends React.Component {
 				{ content: "Add Todo", id: uuid() },
 			],
 		};
-		// localStorage.setItem("todos", this.state.todos);
 	}
 
 	addToDo = (todo) => {
@@ -39,8 +38,6 @@ export default class ToDoList extends React.Component {
 					if (e.id === id) e.content = editedItem;
 					return e;
 				});
-
-				// console.log(newTodo);
 				return { todos: newTodo };
 			},
 			() => localStorage.setItem("todos", JSON.stringify(this.state.todos))
@@ -59,7 +56,7 @@ export default class ToDoList extends React.Component {
 		return (
 			<div className="ToDoList">
 				<div>
-					<h1 className="ToDoList-title">To-Do</h1>
+					<h1 className="ToDoList-title">ToDo</h1>
 					<div className="ToDoList-todos">{todos}</div>
 				</div>
 				<TodoForm addToDo={this.addToDo} />
